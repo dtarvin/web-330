@@ -13,26 +13,26 @@ console.log(header.display("David", "Tarvin", "Exercise 1.3"));
 console.log("");
 
 function CellPhone(manufacturer, model, color, price) {
-    this.manufacturer = manufacturer;
-    this.model = model;
-    this.color = color;
-    this.price = price;
+  this.manufacturer = manufacturer;
+  this.model = model;
+  this.color = color;
+  this.price = price;
 
-    this.getPrice = function() {
-        return this.price;
-    }
+  this.getPrice = function() {
+    return this.price;
+  }
 
-    this.getModel = function() {
-        return this.model;
-    }
+  this.getModel = function() {
+    return this.model;
+  }
 
-    this.getDetails = function() {
-        console.log("-- DISPLAYING CELL PHONE DETAILS --");
-        console.log("Manufacturer: " + this.manufacturer);
-        console.log("Model: " + this.getModel());
-        console.log("Color: " + this.color);
-        console.log("Price: " + this.getPrice());
-    }
+  this.getDetails = function() {
+    console.log("-- DISPLAYING CELL PHONE DETAILS --");
+    console.log("Manufacturer: " + this.manufacturer);
+    console.log("Model: " + this.getModel());
+    console.log("Color: " + this.color);
+    console.log("Price: " + this.getPrice());
+  }
 }
 
 var iPhone = new CellPhone("Apple", "iPhone XR", "Space Gray", "$799.99");
