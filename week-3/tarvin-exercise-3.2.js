@@ -16,32 +16,32 @@ console.log("");
 
 // create Postgres and set properties
 function Postgres(properties) {
-    this.username = properties.username || "admin";
-    this.password = properties.password || "s3cret";
-    this.server = properties.server || "localhost:5432";
+  this.username = properties.username || "admin";
+  this.password = properties.password || "s3cret";
+  this.server = properties.server || "localhost:5432";
 }
 
 // create MySql and set properties
 function MySql(properties) {
-    this.username = properties.username || "ca-admin";
-    this.password = properties.password || "ca-s3cret";
-    this.server = properties.server || "localhost:8000";
-    this.version = properties.version || 5.7
+  this.username = properties.username || "ca-admin";
+  this.password = properties.password || "ca-s3cret";
+  this.server = properties.server || "localhost:8000";
+  this.version = properties.version || 5.7
 }
 
 // create Oracle and set properties
 function Oracle(properties) {
-    this.username = properties.username || "or-admin";
-    this.password = properties.password || "or-s3cret";
-    this.server = properties.server || "localhost:8101";
-    this.version = properties.version || 8.2
+  this.username = properties.username || "or-admin";
+  this.password = properties.password || "or-s3cret";
+  this.server = properties.server || "localhost:8101";
+  this.version = properties.version || 8.2
 }
 
 // create Informix and set properties
 function Informix(properties) {
-    this.username = properties.username || "in-admin";
-    this.password = properties.password || "in-s3cret";
-    this.server = properties.server || "localhost:3000";
+  this.username = properties.username || "in-admin";
+  this.password = properties.password || "in-s3cret";
+  this.server = properties.server || "localhost:3000";
 }
 
 // create DatabaseFactory
@@ -52,49 +52,49 @@ DatabaseFactory.prototype.databaseClass = MySql;
 
 // set up creation of different factories for different objects
 DatabaseFactory.prototype.createDatabase = function(properties) {
-    if (properties.databaseType === "Postgres") {
-        this.databaseClass = Postgres;
-    } else if (properties.databaseType === "Informix") {
-        this.databaseClass = Informix;
-    } else if (properties.databaseType === "Oracle") {
-        this.databaseClass = Oracle;
-    } else {
-        this.databaseClass = MySql;
-    }
+  if (properties.databaseType === "Postgres") {
+    this.databaseClass = Postgres;
+  } else if (properties.databaseType === "Informix") {
+    this.databaseClass = Informix;
+  } else if (properties.databaseType === "Oracle") {
+    this.databaseClass = Oracle;
+  } else {
+    this.databaseClass = MySql;
+  }
 
-    return new this.databaseClass(properties);
+  return new this.databaseClass(properties);
 };
 
 // create postgresFactory and its database
 var postgresFactory = new DatabaseFactory();
 var postgres = postgresFactory.createDatabase({
-    databaseType: "Postgres",
-    username: "admin",
-    password: "SuperSecret"
+  databaseType: "Postgres",
+  username: "admin",
+  password: "SuperSecret"
 });
 
 // create mySqlFactory and its database
 var mySqlFactory = new DatabaseFactory();
 var mySql = mySqlFactory.createDatabase({
-    databaseType: 'MySQL',
-    username: "default",
-    password: "password"
+  databaseType: 'MySQL',
+  username: "default",
+  password: "password"
 });
 
 // create oracleFactory and its database
 var oracleFactory = new DatabaseFactory();
 var oracle = oracleFactory.createDatabase({
-    databaseType: 'Oracle',
-    username: "kpossible",
-    password: "whatsthesitch"
+  databaseType: 'Oracle',
+  username: "kpossible",
+  password: "whatsthesitch"
 });
 
 // create informixFactory and its database
 var informixFactory = new DatabaseFactory();
 var informix = informixFactory.createDatabase({
-    databaseType: 'Informix',
-    username: "rstoppable",
-    password: "nakedmolerat"
+  databaseType: 'Informix',
+  username: "rstoppable",
+  password: "nakedmolerat"
 });
 
 // print out the oracle object
