@@ -12,20 +12,16 @@ const header = require('../Tarvin-header.js');
 console.log(header.display("David", "Tarvin", "Exercise 3.3"));
 console.log("");
 
-// start program
-
-// set up singleton object
-var DatabaseSingletonTest = (function() {
+var DatabaseSingleton = (function() {
   var instance;
   function createInstance() {
-    var oracleDatabase = new Object("DatabaseTest instance initialized!");
-    return oracleDatabase;
+    var postgresDatabase = new Object("Database instance initialized!");
+    return postgresDatabase;
   }
 
-  // only create instance of object if an instance is not already created
   return {
     getInstance: function() {
-      if(!instance) {
+      if (!instance) {
         instance = createInstance();
       }
       return instance;
@@ -33,15 +29,13 @@ var DatabaseSingletonTest = (function() {
   }
 })();
 
-// try to create two instances of the singleton object
-function databaseTestInit() {
-  var databaseTestInstance1 = DatabaseSingletonTest.getInstance();
-  var databaseTestInstance2 = DatabaseSingletonTest.getInstance();
+// create two apparent instances of the object
+function DatabaseSingletonTest() {
+  var oracle = DatabaseSingleton.getInstance();
+  var postgres = DatabaseSingleton.getInstance();
 
-  // compare if the "two" instances are really the same instance
-  console.log("Same database instance? " + (databaseTestInstance1 === databaseTestInstance2));
+  // see if "both instances" are in fact the same instance of the object
+  console.log("Same database instance? " + (oracle === postgres));
 }
 
-databaseTestInit();
-
-// end program
+DatabaseSingletonTest();
