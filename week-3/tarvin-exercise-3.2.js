@@ -98,10 +98,10 @@ var informix = informixFactory.createDatabase({
 });
 
 // print out the oracle object
-console.log(oracle);
+console.log("Oracle {\n   username: '" + oracle.username + "',\n   password: '" + oracle.password + "',\n   server: '" + oracle.server + "',\n   version: '" + oracle.version + "'\n}\n");
 
 // print out the informix object
-console.log(informix);
+console.log("Informix {\n   username: '" + informix.username + "',\n   password: '" + informix.password + "',\n   server: '" + informix.server + "'\n}");
 
 // end program
 
