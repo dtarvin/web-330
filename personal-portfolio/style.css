@@ -5,20 +5,20 @@ body {
     color:#333;
     background:#fff;
   }
-  
+
   .container {
     width:300px;
     padding:0 0;
     margin:10vw;
     float: left;
   }
-  
+
   .content {
     position:relative;
     z-index:1;
     box-shadow: 0 0 0 0;
   }
-  
+
   .triangle-isosceles:after {
     content:"";
     position:absolute;
@@ -30,7 +30,7 @@ body {
     display:block;
     /* width: 1px; */
   }
-  
+
   .triangle-isosceles {
     position:relative;
     padding:15px;
@@ -46,35 +46,39 @@ body {
     border-radius:10px;
     box-shadow: 3px 3px 3px 0 rgba(178, 178, 178, 0.6);
   }
-  
-  .bubble:before { 
-    background-color: #F2F2F2; 
-    bottom: -15px; 
-    box-shadow: 3px 3px 3px 0 rgba(178, 178, 178, 0.6); 
-    content: " "; 
-    display: block; 
-    height: 30px; 
-    left: 55px; 
-    position: absolute; 
-    transform: rotate(45deg); 
-    width: 30px; 
+
+  .bubble:before {
+    background-color: #F2F2F2;
+    bottom: -15px;
+    box-shadow: 3px 3px 3px 0 rgba(178, 178, 178, 0.6);
+    content: " ";
+    display: block;
+    height: 30px;
+    left: 55px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 30px;
   }
-  
-  .bubble { 
-    background-color: #F2F2F2; 
-    border-radius: 10px 10px 10px 10px; 
-    box-shadow: 2px 3px 6px #B2B2B2; 
-    display: inline-block; 
-    padding: 18px; 
-    position: relative; 
+
+  .bubble {
+    background-color: #F2F2F2;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 2px 3px 6px #B2B2B2;
+    display: inline-block;
+    padding: 18px;
+    position: relative;
     vertical-align: top;
   }
-  
-  .text { 
-    width: 310px; 
-    margin: 10px; 
+
+  .text {
+    width: 310px;
+    margin: 10px;
   }
-  
+
   .hidden {
     display: none;
+  }
+
+  .after-bubbles {
+    text-align: center;
   }

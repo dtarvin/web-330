@@ -7,27 +7,52 @@ function typeWriter(text, n) {
       }, 100);
     }
   }
-  
+
   var text = $('.test').data('text');
   typeWriter(text, 0);
-  
-  
-//   function bubblesFadingInAndOut() {
-//     $('.bubble1').fadeIn(2000);
-//     setTimeout(function() {
-//       $('.bubble1').fadeOut(2000, function() {
-//         $('.bubble2').fadeIn(2000);
-//         setTimeout(function() {
-//           $('.bubble2').fadeOut(2000, function() {
-//             $('.bubble3').fadeIn(2000);
-//             setTimeout(function() {
-//               $('.bubble3').fadeOut(2000);
-//             }, 5000);          
-//           });
-//         }, 5000);
-//       });
-//       }, 5000);
-//     }
-  
-  bubblesFadingInAndOut();
-  
+
+
+  // function bubblesFadingInAndOut() {
+  //   $('.bubble1').fadeIn(1000);
+  //   setTimeout(function() {
+  //     $('.bubble1').fadeOut(1000, function() {
+  //       $('.bubble2').fadeIn(1000);
+  //       setTimeout(function() {
+  //         $('.bubble2').fadeOut(1000, function() {
+  //           $('.bubble3').fadeIn(1000);
+  //           setTimeout(function() {
+  //             $('.bubble3').fadeOut(1000, function() {
+  //               $('.after-bubbles').fadeIn(1000);
+  //             });
+  //           }, 3000);
+  //         });
+
+  //       }, 3000);
+  //     });
+  //     }, 3000);
+  //   }
+
+  $('.bubble1').fadeIn(1000);
+  setTimeout(function() {
+    $('.bubble1').fadeOut(1000);
+  }, 3000);
+
+  setTimeout(function() {
+    $('.bubble2').fadeIn(1000);
+    setTimeout(function() {
+      $('.bubble2').fadeOut(1000, function() {
+        $('div').remove('.container1');
+      });
+    }, 3000);
+  }, 5000);
+
+  setTimeout(function() {
+    // $('div').remove('.container1');
+    $('.bubble3').fadeIn(1000);
+    setTimeout(function() {
+      $('.bubble3').fadeOut(1000, function() {
+        $('div').remove('.container2');
+      });
+    }, 3000);
+  }, 10000);
+
