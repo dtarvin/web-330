@@ -11,11 +11,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HTTP GET and POST Operations</title>
+  <meta charset="UTF-8">
+  <title>HTTP GET and POST Operations</title>
 
-    <!-- jQuery reference -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- jQuery reference -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -26,17 +26,17 @@
 
 <script>
 
-    $(function() {
+  $(function() {
 
-      $("#get1").click(function() {
+    $("#get1").click(function() {
 
-          $.get('https://dog.ceo/api/breeds/image/random', function(data, status) {
-            console.log('Data: ' + JSON.stringify(data) + '\nStatus: ' + status);
-          })
-
-      });
+      $.get('https://dog.ceo/api/breeds/image/random', function(data, status) {
+        console.log('Data: ' + JSON.stringify(data) + '\nStatus: ' + status);
+      })
 
     });
+
+  });
 
 </script>
 
