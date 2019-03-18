@@ -5,7 +5,7 @@ body {
     color:#333;
     background:#fff;
   }
-  
+
   .container {
     width:300px;
     padding:0 0;
@@ -60,14 +60,14 @@ body {
     transform: rotate(45deg); 
     width: 30px; 
   }
-  
-  .bubble { 
-    background-color: #F2F2F2; 
-    border-radius: 10px 10px 10px 10px; 
-    box-shadow: 2px 3px 6px #B2B2B2; 
-    display: inline-block; 
-    padding: 18px; 
-    position: relative; 
+
+  .bubble {
+    background-color: #F2F2F2;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 2px 3px 6px #B2B2B2;
+    display: inline-block;
+    padding: 18px;
+    position: relative;
     vertical-align: top;
   } */
   
@@ -75,7 +75,11 @@ body {
     width: 310px; 
     margin: 10px; 
   }
-  
+
   .hidden {
     display: none;
+  }
+
+  .after-bubbles {
+    text-align: center;
   }
