@@ -11,15 +11,16 @@ body {
     padding:0 0;
     margin:10vw;
     float: left;
+    /* border: 1px solid black; */
   }
   
-  .content {
+  /* .content {
     position:relative;
     z-index:1;
     box-shadow: 0 0 0 0;
-  }
+  } */
   
-  .triangle-isosceles:after {
+  .bubble:after {
     content:"";
     position:absolute;
     bottom:-15px;
@@ -31,10 +32,10 @@ body {
     /* width: 1px; */
   }
   
-  .triangle-isosceles {
+  .bubble {
     position:relative;
     padding:15px;
-    margin:1em 0 3em;
+    /* margin:1em 0 3em; */
     color:#000;
     background:#f3961c;
     background:-webkit-gradient(linear, 0 0, 0 100%, from(#f9d835), to(#f3961c));
@@ -47,7 +48,7 @@ body {
     box-shadow: 3px 3px 3px 0 rgba(178, 178, 178, 0.6);
   }
   
-  .bubble:before { 
+  /* .bubble:before { 
     background-color: #F2F2F2; 
     bottom: -15px; 
     box-shadow: 3px 3px 3px 0 rgba(178, 178, 178, 0.6); 
@@ -68,7 +69,7 @@ body {
     padding: 18px; 
     position: relative; 
     vertical-align: top;
-  }
+  } */
   
   .text { 
     width: 310px; 
