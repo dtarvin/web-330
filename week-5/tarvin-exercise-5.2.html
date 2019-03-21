@@ -13,18 +13,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Exercise 5.2 - The Proxy Pattern</title>
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet">
+  <style>
+      body {
+          margin: 2rem auto;
+          width: 40%;
+      }
+      button {
+          text-align: center;
+          box-shadow: 2px 2px 2px 0;
+          color: darkblue;
+      }
+      span {
+          font-family: "Orbitron", sans-serif;
+          font-size: 2rem;
+          background: -webkit-linear-gradient(blue, #A4508B);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+  </style>
   <!-- jquery Reference Library -->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
   </head>
   <body>
 
-    <h2>Exercise 5.2 - The Proxy Pattern</h2>
-
-    <button id="btnExample">Run Test</button>
-
-    <br><span id="proxyExample"></span>
+    <div class="text-center">
+      <h2>Exercise 5.2 - The Proxy Pattern</h2>
+      <button id="btnExample">Run Test</button>
+      <br><span id="proxyExample"></span>
+    </div>
+    
+    
   <script>
     $(function() {
       var transformer = {
