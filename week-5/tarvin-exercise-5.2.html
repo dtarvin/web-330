@@ -11,36 +11,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Exercise 5.2 - The Proxy Pattern</title>
+  <meta charset="UTF-8">
+  <title>Exercise 5.2 - The Proxy Pattern</title>
 
-    <!-- jquery Reference Library -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- jquery Reference Library -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-</head>
-<body>
+  </head>
+  <body>
 
     <h2>Exercise 5.2 - The Proxy Pattern</h2>
 
     <button id="btnExample">Run Test</button>
 
     <br><span id="proxyExample"></span>
-<script>
+  <script>
     $(function() {
-        var transformer = {
-            name: "Megatron",
-            altMode: "tank",
-            display: function() {
-                $("#proxyExample").html("");
-                $("#proxyExample").append("<br />Name: " + this.name + "<br/>Alt-Mode: " + this.altMode);
-            }
-        };
+      var transformer = {
+        name: "Megatron",
+        altMode: "tank",
+        display: function() {
+          $("#proxyExample").html("");
+          $("#proxyExample").append("<br />Name: " + this.name + "<br/>Alt-Mode: " + this.altMode);
+        }
+      };
 
-        $("#btnExample").click($.proxy(transformer, "display"));
+      $("#btnExample").click($.proxy(transformer, "display"));
 
     });
-</script>
-
-
+  </script>
 </body>
 </html>
