@@ -70,3 +70,11 @@ p {
   justify-content: space-around;
 }
 
+#about {
+  width: 80%;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
