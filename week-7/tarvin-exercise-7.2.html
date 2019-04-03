@@ -12,17 +12,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Exercise 7.2</title>
+  <title>Exercise 7.2</title>
 
-    <!-- Stylesheet - Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <!-- Stylesheet - Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+    integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-    <!-- JavaScript Libraries -->
-    <script src="../knockout-3.5.0.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="../knockout-3.5.0.js"></script>
 </head>
 <body>
   <div class="container" role="main">
@@ -46,27 +46,25 @@
     </div>
 
     <br>
-
   </div>
 
-<script>
+  <script>
 
-  function PersonViewModel() {
-    this.firstName = ko.observable("");
-    this.lastName = ko.observable("");
+    function PersonViewModel() {
+      this.firstName = ko.observable("");
+      this.lastName = ko.observable("");
 
-    this.displayFirstName = ko.pureComputed(function() {
-      return this.firstName();
-    }, this);
+      this.displayFirstName = ko.pureComputed(function() {
+        return this.firstName();
+      }, this);
 
-    this.fullName = ko.pureComputed(function() {
-      return this.firstName() + " " + this.lastName();
-    }, this);
-  }
+      this.fullName = ko.pureComputed(function() {
+        return this.firstName() + " " + this.lastName();
+      }, this);
+    }
 
-  ko.applyBindings(new PersonViewModel());
+    ko.applyBindings(new PersonViewModel());
 
-</script>
-
+  </script>
 </body>
 </html>
