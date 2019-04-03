@@ -1,0 +1,93 @@
+<!--
+============================================
+; Title:  tarvin-assignment-7.4.html
+; Author: Richard Krasso
+; Modified by: David Tarvin
+; Date:   03 April 2019
+; Description: Other Bindings
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Other Bindings</title>
+  <!-- Stylesheet - Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+  integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <style>
+    th {
+      color: yellow;
+    }
+  </style>
+  <!-- JavaScript Libraries -->
+  <script src="../knockout-3.5.0.js"></script>
+</head>
+<body>
+
+  <table class="table table-dark table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody data-bind="foreach: tutorial">
+      <tr>
+        <td data-bind="style: {color: color}, text: title"></td>
+        <td data-bind="style: {color: color}, text: description"></td>
+        <!-- <td data-bind="text: url"></td> -->
+        <td><a data-bind="text: url, attr: {href: url}" target="_blank"></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+
+    function TutorialViewModel() {
+
+      this.tutorial = ko.observableArray([
+        {
+          title: "Learn Knockout JS Framework from GroundUp",
+          url: "https://www.udemy.com/learn-knockout-js-framework-from-groundup/",
+          description: "Tutorial for Knockout.js framework",
+          color: "lightblue"
+        },
+        {
+          title: "The Complete Node.js Developer Course (3rd Edition)",
+          url: "https://www.udemy.com/the-complete-nodejs-developer-course-2/",
+          description: "Node tutorial utilizing Express, MongoDB and Mocha",
+          color: "pink"
+        },
+        {
+          title: "Front End Frameworks by Google",
+          url: "https://www.udacity.com/course/front-end-frameworks--ud894",
+          description: "Tutorial for Backbone, Angular & Ember",
+          color: "lightgreen"
+        },
+        {
+          title: "Introduction to Web Development",
+          url: "https://www.coursera.org/learn/web-development",
+          description: "Tutorial covering HTML, CSS and JavaScript",
+          color: "lightgoldenrodyellow"
+        },
+        {
+          title: "Asynchronous Programming with JavaScript",
+          url: "https://teamtreehouse.com/library/asynchronous-programming-with-javascript/upcoming",
+          description: "Intermediate tutorial covering callbacks, promises and async/await",
+          color: "lightsalmon"
+        }
+      ])
+
+    }
+
+    ko.applyBindings(new TutorialViewModel());
+
+  </script>
+</body>
+</html>
