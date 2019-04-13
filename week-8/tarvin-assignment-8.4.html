@@ -108,17 +108,17 @@
 
   <script>
 
-    function Employee(id, name) {
+    function EmployeeEntry(id, name) {
       this.Id = id;
       this.Name = name;
     }
 
     var employeeList = [
-      new Employee(1, "Keith"),
-      new Employee(2, "Kyle"),
-      new Employee(3, "Anu"),
-      new Employee(4, "Nanda"),
-      new Employee(5, "David")
+      new EmployeeEntry(1, "Keith"),
+      new EmployeeEntry(2, "Kyle"),
+      new EmployeeEntry(3, "Anu"),
+      new EmployeeEntry(4, "Nanda"),
+      new EmployeeEntry(5, "David")
     ];
 
     function PayrollViewModel() {
@@ -127,6 +127,7 @@
       self.error = ko.observable("");
       self.Id = ko.observable("");
       self.Name = ko.observable("");
+      self.nameToAdd = ko.observable("");
 
       var Employee = {
         Id: self.Id,
@@ -155,9 +156,10 @@
       }
 
       self.add = function() {
-        if((self.nameToAdd() !=="") && (self.employeeList.indexOf(self.nameToAdd())<0)) {
+        if((self.nameToAdd()!=="") && (self.Employees.indexOf(self.nameToAdd())<0)) {
           self.error("");
-          self.employeeList.push(self.nameToAdd());
+          var idToAdd = self.Employees().length + 1;
+          self.Employees.push(new EmployeeEntry(idToAdd, self.nameToAdd()));
         } else {
           self.error("Duplicate or Invalid Entry.");
         }
